@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FlyleafWinuiSample (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "FlyleafWinuiSample (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

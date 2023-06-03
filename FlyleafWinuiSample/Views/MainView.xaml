@@ -11,7 +11,7 @@
       xmlns:triggers="using:CommunityToolkit.WinUI.UI.Triggers"
       xmlns:animation="using:CommunityToolkit.WinUI.UI.Animations"
       xmlns:flyleaf="using:FlyleafLib.Controls.WinUI"
-      xmlns:uconverter="using:UHelper.Converter"
+      xmlns:converter="using:WinuiHelperLib.UI.Xaml.Converters"
       xmlns:viewmodels="using:FlyleafWinuiSample.ViewModels"
       d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
       Background="Transparent">
@@ -140,23 +140,41 @@
                     Value="1" />
             <Setter Property="FontSize"
                     Value="15" />
+            <Setter Property="FontFamily" Value="Segoe Fluent Icons"/>
         </Style>
-        <x:String x:Key="GlyphNext">
-            ?</x:String>
-        <x:String x:Key="GlyphPrev">?</x:String>
-        <x:String x:Key="GlyphPlay">?</x:String>
-        <x:String x:Key="GlyphPause">?</x:String>
-        <x:String x:Key="GlyphStop">?</x:String>
+        <x:String x:Key="GlyphNext">&#xF8AD;</x:String>
+        <x:String x:Key="GlyphPrev">&#xF8AC;</x:String>
+        <x:String x:Key="GlyphPlay">&#xF5B0;</x:String>
+        <x:String x:Key="GlyphPause">&#xF8AE;</x:String>
+        <x:String x:Key="GlyphStop">&#xEE95;</x:String>
         <flyleaf:TicksToTimeConverter x:Key="TicksToTime" />
         <flyleaf:TicksToSecondsConverter x:Key="TicksToSeconds" />
-        <uconverter:BoolToVisibilityConverter x:Key="BoolToVisibility" />
-        <uconverter:NullToOpacityConverter x:Key="NullToOpacity" />
+        <converter:BoolToVisibilityConverter x:Key="BoolToVisibility" />
+        <converter:NullToOpacityConverter x:Key="NullToOpacity" />
     </Page.Resources>
     <Grid>
         <!-- VideoPlayer Host -->
         <flyleaf:FlyleafHost x:Name="flyleafHost"
                              Visibility="{Binding Player.CanPlay,Converter={StaticResource BoolToVisibility}}"
                              Player="{Binding Player}" />
+        <!-- Subtitle -->
+        <Border Grid.Row="1"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center"
+                        Padding="10,5"
+                        Background="#8f000000"
+                        CornerRadius="2"
+                        Opacity="{Binding Player.Subtitles.SubsText,Converter={StaticResource NullToOpacity}}">
+            <Border.ChildTransitions>
+                <TransitionCollection>
+                    <RepositionThemeTransition />
+                </TransitionCollection>
+            </Border.ChildTransitions>
+            <TextBlock FontSize="20"
+                               TextAlignment="Center"
+                               IsTextSelectionEnabled="True"
+                               Text="{Binding Player.Subtitles.SubsText}" />
+        </Border>
         <!-- NavigationView -->
         <NavigationView x:Name="navView"
                         Grid.RowSpan="3"
@@ -175,24 +193,7 @@
                     <RowDefinition />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <!-- Subtitle -->
-                <Border Grid.Row="1"
-                        VerticalAlignment="Bottom"
-                        HorizontalAlignment="Center"
-                        Padding="10,5"
-                        Background="#8f000000"
-                        CornerRadius="2"
-                        Opacity="{Binding Player.Subtitles.SubsText,Converter={StaticResource NullToOpacity}}">
-                    <Border.ChildTransitions>
-                        <TransitionCollection>
-                            <RepositionThemeTransition />
-                        </TransitionCollection>
-                    </Border.ChildTransitions>
-                    <TextBlock FontSize="17"
-                               TextAlignment="Center"
-                               IsTextSelectionEnabled="True"
-                               Text="{Binding Player.Subtitles.SubsText}" />
-                </Border>
+
                 <!-- Titlebar -->
                 <Grid Grid.Row="0">
                     <Grid.Background>

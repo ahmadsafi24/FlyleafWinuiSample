@@ -73,7 +73,7 @@ namespace FlyleafWinuiSample.ViewModels
             }
             else
             {
-                OpenCompletedArgs openArg = Player.Open(@"D:\temp\sample.mp4");
+                OpenCompletedArgs openArg = Player.Open(@"E:\Movies\Dune.2021.1080p.10bit.WEBRip.6CH.x265.HEVC-PSA.FilmBan.mkv");
 
             }
             return Task.CompletedTask;

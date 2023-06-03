@@ -37,7 +37,8 @@ public sealed partial class MainView : Page
         MainView_SizeChanged(null, null);
     }
 
-    const int rectposleft = 95;
+    //rectposleft= NavigationBackButtonWidth + PaneToggleButtonWidth - 4(borders)
+    const int rectposleft = 84;
     const int rectpostop = 0;
     int rectheight;
     int rectwidth;

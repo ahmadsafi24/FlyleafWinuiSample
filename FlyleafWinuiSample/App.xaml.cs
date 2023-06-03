@@ -1,21 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using FlyleafWinuiSample.ViewModels;
+﻿using FlyleafWinuiSample.ViewModels;
+using FlyleafWinuiSample.WindowView;
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using Microsoft.UI.Xaml.Shapes;
-using Windows.ApplicationModel;
-using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 
 namespace FlyleafWinuiSample
 {
@@ -34,7 +19,7 @@ namespace FlyleafWinuiSample
 
         private Window m_window;
 
-        #region use singleton dep injection
+        #region Todo: use singleton dep injection
         public static MainViewModel MainViewModel { get; } = new();
 
         #endregion
