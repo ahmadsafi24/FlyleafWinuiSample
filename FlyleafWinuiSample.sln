@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "FlyleafWinuiSample (Package)", "FlyleafWinuiSample (Package)\FlyleafWinuiSample (Package).wapproj", "{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyleafWinuiSample", "FlyleafWinuiSample\FlyleafWinuiSample.csproj", "{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UHelper", "..\..\UPlayer\UHelper\UHelper.csproj", "{578E3160-9845-44FD-A0FC-9272ED5E02BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|ARM64.Build.0 = Debug|ARM64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|x64.ActiveCfg = Debug|x64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|x64.Build.0 = Debug|x64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|x64.Deploy.0 = Debug|x64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|x86.ActiveCfg = Debug|x86
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|x86.Build.0 = Debug|x86
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Debug|x86.Deploy.0 = Debug|x86
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|ARM64.ActiveCfg = Release|ARM64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|ARM64.Build.0 = Release|ARM64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|ARM64.Deploy.0 = Release|ARM64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|x64.ActiveCfg = Release|x64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|x64.Build.0 = Release|x64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|x64.Deploy.0 = Release|x64
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|x86.ActiveCfg = Release|x86
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|x86.Build.0 = Release|x86
+		{0793DFC8-09BC-49A2-B4E7-1F7622550FF9}.Release|x86.Deploy.0 = Release|x86
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Debug|x64.ActiveCfg = Debug|x64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Debug|x64.Build.0 = Debug|x64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Debug|x86.ActiveCfg = Debug|x86
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Debug|x86.Build.0 = Debug|x86
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Release|ARM64.Build.0 = Release|ARM64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Release|x64.ActiveCfg = Release|x64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Release|x64.Build.0 = Release|x64
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Release|x86.ActiveCfg = Release|x86
+		{00E1E990-715A-4AE9-AFF0-E8698DCDA63E}.Release|x86.Build.0 = Release|x86
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Debug|ARM64.ActiveCfg = Debug|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Debug|ARM64.Build.0 = Debug|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Debug|x64.ActiveCfg = Debug|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Debug|x64.Build.0 = Debug|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Debug|x86.ActiveCfg = Debug|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Debug|x86.Build.0 = Debug|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Release|ARM64.ActiveCfg = Release|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Release|ARM64.Build.0 = Release|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Release|x64.ActiveCfg = Release|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Release|x64.Build.0 = Release|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Release|x86.ActiveCfg = Release|x64
+		{578E3160-9845-44FD-A0FC-9272ED5E02BD}.Release|x86.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FB19FF3-A4CA-4F02-8E85-2805E44577F9}
+	EndGlobalSection
+EndGlobal

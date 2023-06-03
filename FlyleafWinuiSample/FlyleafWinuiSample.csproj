@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows10.0.22000.0</TargetFramework>
+        <TargetPlatformMinVersion>10.0.22000.0</TargetPlatformMinVersion>
+        <RootNamespace>FlyleafWinuiSample</RootNamespace>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <Platforms>x64</Platforms>
+        <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+        <UseWinUI>true</UseWinUI>
+        <EnableMsixTooling>true</EnableMsixTooling>
+        <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Remove="Views\MainView.xaml" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="FlyleafLib"
+                          Version="3.7.17" />
+        <PackageReference Include="FlyleafLib.Controls.WinUI"
+                          Version="1.0.8" />
+        <PackageReference Include="Microsoft.WindowsAppSDK"
+                          Version="1.4.230518007-experimental1" />
+        <PackageReference Include="Microsoft.Windows.SDK.BuildTools"
+                          Version="10.0.25363-preview" />
+        <PackageReference Include="CommunityToolkit.Mvvm"
+                          Version="8.2.0" />
+        <PackageReference Include="CommunityToolkit.WinUI"
+                          Version="7.1.2" />
+        <PackageReference Include="CommunityToolkit.WinUI.UI"
+                          Version="7.1.2" />
+        <PackageReference Include="CommunityToolkit.WinUI.UI.Animations"
+                          Version="7.1.2" />
+        <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed"
+                          Version="2.0.9" />
+        <Manifest Include="$(ApplicationManifest)" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\UPlayer\UHelper\UHelper.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Page Update="Views\MainView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+    </ItemGroup>
+</Project>
