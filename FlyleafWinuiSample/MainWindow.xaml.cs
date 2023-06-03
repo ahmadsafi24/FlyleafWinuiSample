@@ -3,8 +3,8 @@ using FlyleafLib;
 using FlyleafLib.MediaPlayer;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
-using UHelper;
 using WinRT.Interop;
+using WinuiHelperLib.UI.Window;
 
 namespace FlyleafWinuiSample
 {
@@ -16,9 +16,10 @@ namespace FlyleafWinuiSample
 
             #region backdrop
             IntPtr handle = WindowNative.GetWindowHandle(this);
-            WindowsFrame.ToggleImmersiveDarkMode(handle, true);
-            WindowsFrame.ExtendFrameIntoClientArea(handle);
-            WindowsFrame.SetBackdropType(handle, BackdropType.Mica);
+            WindowManager windowManager = new();
+            windowManager.ToggleImmersiveDarkMode(handle, true);
+            windowManager.ExtendFrameIntoClientArea(handle);
+            windowManager.SetBackdropType(handle, BackdropType.Mica);
             this.SystemBackdrop = new Microsoft.UI.Xaml.Media.MicaBackdrop();
             #endregion
 

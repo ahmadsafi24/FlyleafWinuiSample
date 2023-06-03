@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using FlyleafWinuiSample.Helpers;
 using FlyleafWinuiSample.ViewModels;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
@@ -9,7 +8,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Windows.Graphics;
 using Windows.Storage;
-
+using WinuiHelperLib.UI.Window;
 namespace FlyleafWinuiSample.Views;
 
 public sealed partial class MainView : Page
@@ -47,7 +46,7 @@ public sealed partial class MainView : Page
     {
         rectheight = appWindowTitleBar.Height;
         rectwidth = appWindow.Size.Width - rectposleft;
-        scaleadj = HelperMethods.GetScaleAdjustment(parentWindow_handle);
+        scaleadj = WindowManager.GetScaleAdjustment(parentWindow_handle);
 
         List<RectInt32> dragablerects = new() { new RectInt32(rectposleft * (int)scaleadj, rectpostop * (int)scaleadj, rectwidth * (int)scaleadj, rectheight * (int)scaleadj) };
 
