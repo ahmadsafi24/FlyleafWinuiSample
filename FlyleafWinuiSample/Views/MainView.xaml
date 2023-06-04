@@ -20,19 +20,19 @@
                BasedOn="{StaticResource DefaultButtonStyle}"
                x:Key="MediaControlButton">
             <Setter Property="Width"
-                    Value="40" />
+                Value="40" />
             <Setter Property="Height"
-                    Value="30" />
+                Value="30" />
             <Setter Property="CornerRadius"
-                    Value="3" />
+                Value="3" />
             <Setter Property="BorderThickness"
-                    Value="0" />
+                Value="0" />
             <Setter Property="BorderBrush"
-                    Value="Transparent" />
+                Value="Transparent" />
             <Setter Property="Background"
-                    Value="Transparent" />
+                Value="Transparent" />
             <Setter Property="Foreground"
-                    Value="{ThemeResource TextFillColorSecondary}" />
+                Value="{ThemeResource TextFillColorSecondary}" />
             <!-- <Setter Property="Foreground" Value="{ThemeResource AccentAAFillColorSecondaryBrush}"/> -->
             <Setter Property="Template">
                 <Setter.Value>
@@ -64,22 +64,23 @@
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="Background">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonBackgroundPointerOver}" />
+                                                    Value="{ThemeResource ButtonBackgroundPointerOver}" />
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="BorderBrush">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonBorderBrushPointerOver}" />
+                                                    Value="{ThemeResource ButtonBorderBrushPointerOver}" />
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="Foreground">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonForegroundPointerOver}" />
+                                                    Value="{ThemeResource ButtonForegroundPointerOver}" />
                                             </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                         <VisualState.Setters>
-                                            <Setter Target="ContentPresenter.(controls:AnimatedIcon.State)"
-                                                    Value="PointerOver" />
+                                            <Setter
+                                                Target="ContentPresenter.(controls:AnimatedIcon.State)"
+                                                Value="PointerOver" />
                                         </VisualState.Setters>
                                     </VisualState>
                                     <VisualState x:Name="Pressed">
@@ -87,22 +88,23 @@
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="Background">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonBackgroundPressed}" />
+                                                    Value="{ThemeResource ButtonBackgroundPressed}" />
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="BorderBrush">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonBorderBrushPressed}" />
+                                                    Value="{ThemeResource ButtonBorderBrushPressed}" />
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="Foreground">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonForegroundPressed}" />
+                                                    Value="{ThemeResource ButtonForegroundPressed}" />
                                             </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                         <VisualState.Setters>
-                                            <Setter Target="ContentPresenter.(controls:AnimatedIcon.State)"
-                                                    Value="Pressed" />
+                                            <Setter
+                                                Target="ContentPresenter.(controls:AnimatedIcon.State)"
+                                                Value="Pressed" />
                                         </VisualState.Setters>
                                     </VisualState>
                                     <VisualState x:Name="Disabled">
@@ -113,18 +115,19 @@
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="BorderBrush">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonBorderBrushDisabled}" />
+                                                    Value="{ThemeResource ButtonBorderBrushDisabled}" />
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                                            Storyboard.TargetProperty="Foreground">
                                                 <DiscreteObjectKeyFrame KeyTime="0"
-                                                                        Value="{ThemeResource ButtonForegroundDisabled}" />
+                                                    Value="{ThemeResource ButtonForegroundDisabled}" />
                                             </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                         <VisualState.Setters>
                                             <!-- DisabledVisual Should be handled by the control, not the animated icon. -->
-                                            <Setter Target="ContentPresenter.(controls:AnimatedIcon.State)"
-                                                    Value="Normal" />
+                                            <Setter
+                                                Target="ContentPresenter.(controls:AnimatedIcon.State)"
+                                                Value="Normal" />
                                         </VisualState.Setters>
                                     </VisualState>
                                 </VisualStateGroup>
@@ -137,10 +140,11 @@
         <Style TargetType="FontIcon"
                x:Key="MediaControlFontIcon">
             <Setter Property="Opacity"
-                    Value="1" />
+                Value="1" />
             <Setter Property="FontSize"
-                    Value="15" />
-            <Setter Property="FontFamily" Value="Segoe Fluent Icons"/>
+                Value="15" />
+            <Setter Property="FontFamily"
+                Value="Segoe Fluent Icons" />
         </Style>
         <x:String x:Key="GlyphNext">&#xF8AD;</x:String>
         <x:String x:Key="GlyphPrev">&#xF8AC;</x:String>
@@ -159,21 +163,21 @@
                              Player="{Binding Player}" />
         <!-- Subtitle -->
         <Border Grid.Row="1"
-                        VerticalAlignment="Bottom"
-                        HorizontalAlignment="Center"
-                        Padding="10,5"
-                        Background="#8f000000"
-                        CornerRadius="2"
-                        Opacity="{Binding Player.Subtitles.SubsText,Converter={StaticResource NullToOpacity}}">
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Padding="10,5"
+                Background="#8f000000"
+                CornerRadius="2"
+                Opacity="{Binding Player.Subtitles.SubsText,Converter={StaticResource NullToOpacity}}">
             <Border.ChildTransitions>
                 <TransitionCollection>
                     <RepositionThemeTransition />
                 </TransitionCollection>
             </Border.ChildTransitions>
             <TextBlock FontSize="20"
-                               TextAlignment="Center"
-                               IsTextSelectionEnabled="True"
-                               Text="{Binding Player.Subtitles.SubsText}" />
+                       TextAlignment="Center"
+                       IsTextSelectionEnabled="True"
+                       Text="{Binding Player.Subtitles.SubsText}" />
         </Border>
         <!-- NavigationView -->
         <NavigationView x:Name="navView"
@@ -193,7 +197,6 @@
                     <RowDefinition />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-
                 <!-- Titlebar -->
                 <Grid Grid.Row="0">
                     <Grid.Background>

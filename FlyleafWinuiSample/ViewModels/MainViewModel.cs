@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Diagnostics;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -73,7 +71,7 @@ namespace FlyleafWinuiSample.ViewModels
             }
             else
             {
-                OpenCompletedArgs openArg = Player.Open(@"E:\Movies\Dune.2021.1080p.10bit.WEBRip.6CH.x265.HEVC-PSA.FilmBan.mkv");
+                OpenCompletedArgs openArg = Player.Open(@"load latest opened file from json");
 
             }
             return Task.CompletedTask;
